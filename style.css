@@ -1,0 +1,230 @@
+/* Estilo geral para o corpo */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px; /* Ajustado para um tamanho mais confortável */
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Barra de navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #758ecd;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+/* Título "Portfólio" */
+.portfolio-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #fff; 
+    animation: typing 4s steps(15, end), blink 0.5s step-end infinite;
+}
+
+/* Links de navegação */
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #624cab;
+}
+
+/* Animação de escrita */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 150px;
+    }
+}
+
+/* Animação do cursor piscando */
+@keyframes blink {
+    from {
+        border-right-color: #fff;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* Seção Home */
+#home {
+    text-align: center;
+    margin-top: 150px;
+}
+
+#home p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Courier', monospace;
+}
+
+#name {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Cores para alternância */
+#name {
+    color: #f764d9;
+}
+
+#name.lih {
+    color: #4bd176;
+}
+
+#name.lili {
+    color: #ad3ec3;
+}
+
+#name.lia {
+    color: #cf3333;
+}
+
+/* Seção de caixas com animações */
+.info-box {
+    margin: 40px auto;
+    max-width: 80%;
+    padding: 20px;
+    background-color: #c1cefe;
+    border: 2px solid #a0ddff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+.info-box:hover {
+    border-color: #034f96;
+    box-shadow: 0px 6px 12px rgba(149, 9, 249, 0.3);
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Ícones nas caixas */
+.info-content i {
+    color: #000000;
+    margin-right: 10px;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+/* Rodapé */
+footer {
+    padding: 20px;
+    background-color: #758ecd;
+    color: #fff;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+}
+
+/* Ícones de redes sociais */
+.social-icons a {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #393fad;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ajustes para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Empilha os itens do menu */
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .info-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-image {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+img {
+    width: 200px; /* Ajuste a largura */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px; /* Arredonda as bordas, se desejar */
+}
+
+/* Estilo de Favoritos */
+#favoritos .info-content p {
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte para maior legibilidade */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+}
+
+#favoritos .info-content i {
+    color: #624cab; /* Cor dos ícones para ficar mais visível */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Ajustes de cor ao passar o mouse sobre os itens */
+#favoritos .info-content p:hover {
+    color: #3e85db;
+    cursor: pointer;
+}
+
+/* Ajustes de cor no Favoritos para telas pequenas */
+@media (max-width: 768px) {
+    #favoritos .info-content {
+        text-align: center; /* Centraliza o conteúdo em telas menores */
+    }
+
+    #favoritos .info-content p {
+        font-size: 1rem; /* Ajuste o tamanho da fonte para telas menores */
+    }
+}
